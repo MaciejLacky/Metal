@@ -9,7 +9,7 @@ const end = section.querySelector("h1");
 //SCROLLMAGIC
 const controller = new ScrollMagic.Controller();
 //Text Animation
-const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
+const textAnim = TweenMax.fromTo(text, 3, { opacity: 0.2 }, { opacity: 1 });
 
 //Scenes
 let scene = new ScrollMagic.Scene({
@@ -37,3 +37,4 @@ setInterval(() => {
 
   video.currentTime = delay;
 }, 33.3);
+
