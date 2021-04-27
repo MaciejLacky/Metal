@@ -161,14 +161,21 @@
 }
 .img-content{
    
-    margin-top: 2vw;
+   margin-top: 2vw;
    margin-left: -15vw;
 }
 .img-work{
+  position: relative;
+  z-index: 100;
    transition:  0.5s;
    float: left;
    width: 20vw;
-   height: 15vw;  
+   height: 15vw;
+    
+}
+.img-work:hover{
+  transform: scale(0.9);
+  border: solid 5px #fb4f00;
 }
 
 
