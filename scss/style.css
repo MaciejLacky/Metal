@@ -52,9 +52,7 @@ body {
 }
 
 section {
-  position: relative;
-  margin-top: -40px;
-  height: 80px;
+  height: 90px;
   background-color: black;
   color: white;
   z-index: 10;
@@ -69,7 +67,7 @@ section p {
 .container-nav {
   position: absolute;
   margin: 20px;
-  width: auto;
+  width: 100vw;
   z-index: 100;
 }
 
@@ -95,7 +93,7 @@ section p {
 
 .topnav p {
   float: right;
-  margin-left: 35vw;
+  margin-right: 6vw;
   margin-top: 1vw;
   color: #f2f2f2;
   text-align: center;
@@ -186,7 +184,8 @@ section p {
   transition: 0.5s;
   float: left;
   width: 20vw;
-  height: 15vw;
+  height: 16vw;
+  cursor: pointer;
 }
 
 .img-work:hover {
@@ -221,6 +220,7 @@ section p {
 }
 
 .hero-section {
+  position: relative;
   margin-top: 1vw;
   margin-bottom: 25vw;
   margin-left: -20vw;
@@ -305,6 +305,29 @@ section p {
           filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
+.content-first-page {
+  margin-top: 2vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+.content-first-page h2 {
+  font-size: 2.5vw;
+}
+
+.content-first-page p {
+  margin-top: 1vw;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+}
+
+.content-first-page hr {
+  width: 24%;
+  height: 5px;
+  border: none;
+  background-color: #fb4f00;
+}
+
 .card__content {
   left: 0;
   padding: var(--spacing-l);
@@ -361,11 +384,79 @@ section p {
   font-size: 1vw;
 }
 
+.content-footer button {
+  font-size: 1.5vw;
+  font-family: inherit;
+  padding: 1vw;
+  margin-left: 10vw;
+  border: solid 4px #fb4f00;
+  color: black;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+.content-footer button:hover {
+  font-size: 1.7vw;
+  padding: 1vw;
+  margin-left: 10vw;
+  background-color: #fb4f00;
+  color: black;
+}
+
 .content-footer img {
   float: right;
   width: 40vw;
   height: 30vw;
   margin-right: 10vw;
+}
+
+.content-footer-second {
+  position: relative;
+  background-color: #fafafa;
+  z-index: 2;
+  width: 100vw;
+  height: 25vw;
+  margin-top: 0vw;
+}
+
+.content-footer-second hr {
+  margin-left: 10vw;
+  margin-bottom: 2vw;
+  width: 34%;
+  height: 5px;
+  border: none;
+  background-color: #fb4f00;
+}
+
+.content-footer-second h3 {
+  padding-top: 2vw;
+  padding-left: 10vw;
+  font-size: 2vw;
+}
+
+.content-footer-second p {
+  padding-bottom: 1vw;
+  padding-left: 10vw;
+  padding-right: 2vw;
+  font-weight: 100;
+  font-size: 1vw;
+}
+
+#map {
+  margin-top: 4vw;
+  margin-right: 10vw;
+  float: right;
+  height: 15vw;
+  width: 20vw;
+}
+
+.content-footer-second img {
+  margin-top: 4vw;
+  margin-right: 10vw;
+  float: right;
+  height: 15vw;
+  width: 20vw;
 }
 
 .social-icons {
@@ -440,8 +531,8 @@ section p {
 }
 
 .about-text h2 {
-  font-size: 1.5vw;
-  padding: 2vw;
+  font-size: 2vw;
+  padding: 1vw;
 }
 
 .about-text p {
@@ -450,6 +541,14 @@ section p {
   font-size: 1vw;
   padding-left: 2vw;
   padding-right: 2vw;
+}
+
+.about-text hr {
+  margin-bottom: 2vw;
+  width: 5%;
+  height: 5px;
+  border: none;
+  background-color: #fb4f00;
 }
 
 /*Our work page*/
@@ -610,5 +709,108 @@ section p {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+}
+
+/*Contact form page*/
+.contact-us {
+  margin-top: 4vw;
+  margin-bottom: 850px;
+  margin-left: 18vw;
+}
+
+.contact-us img {
+  float: left;
+  height: 706px;
+  width: 40%;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.addres {
+  font-size: 1.1vw;
+  margin-top: 15vw;
+  margin-left: 2vw;
+  position: absolute;
+  border: solid 3px #fb4f00;
+  color: white;
+}
+
+.addres i {
+  color: #fb4f00;
+}
+
+.addres p {
+  padding: 1vw;
+}
+
+.container-form {
+  float: left;
+  width: 40%;
+  padding: 12px 24px 24px 24px;
+  background: #FAFAFA;
+}
+
+.container-form h3 {
+  text-align: center;
+  font-size: 2vw;
+}
+
+/* Add styles to 'label' selector */
+label {
+  font-size: 0.85em;
+  margin-left: 12px;
+}
+
+/* Add styles to 'input' and 'textarea' selectors */
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* Add styles to show 'focus' of selector */
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  border: 2px solid #fb4f00;
+}
+
+/* Add styles to the submit button */
+input[type=submit] {
+  border: solid 4px #fb4f00;
+  letter-spacing: 0.25vw;
+  font-size: 1.5vw;
+  font-family: inherit;
+  font-weight: 700;
+  margin: 0 auto;
+  outline: 0;
+  color: black;
+  padding: 12px 24px;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Add styles for 'focus' property */
+input[type=submit]:focus {
+  background: #A5D6A7;
+  color: whitesmoke;
+}
+
+/* Style 'hover' property */
+input[type=submit]:hover {
+  background: #fb4f00;
+  font-size: 1.7vw;
+  color: black;
+}
+
+/* Align items to center of the 'div' with the class 'center' */
+.center {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
