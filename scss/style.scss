@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    //box-sizing: border-box;
   }
 
   @font-face{
@@ -17,7 +17,11 @@
   .intro {
     height: 100vh;
   }
-  
+  @media(max-width: 960px){
+    .intro{
+      display: none;
+    }
+  }  
   .intro video {
     height: 100%;
     width: 30%;
@@ -55,8 +59,32 @@
     color: white;
     z-index: 10;
   }
+  .section-page {
+    //position: relative;
+    //margin-top: -40px;
+    height: 90px;
+    background-color: black;
+    color: white;
+    z-index: 10;
+  }
+  @media(max-width: 960px){
+    section{
+     position:absolute;
+     margin-top: 225vw;
+     height: 90px;
+     background-color: black;
+     color: white;
+     z-index: 10;
+     width: 100%;
+     height: 7vw;
+    }
+   }
   
   section p{
+    padding-top: 10px;
+    font-size: 0.9vw;
+  }
+  .section-page p{
     padding-top: 10px;
     font-size: 0.9vw;
   }
@@ -110,10 +138,11 @@
       position: absolute;
       margin-left: 50%;
   }
+
   .card-right{
     z-index: 3;
     width: 100vw;
-    height: 80vh;
+    height: 40vw;
     margin-top: 0vw;
     background-image: url("/img/welding-tig.jpg");
     background-repeat:no-repeat;
@@ -123,7 +152,7 @@
     position: relative;
     z-index: 2;
     width: 40vw;
-    height: 40vh;
+    height: 20vw;
     margin-top: 10vw;
     margin-left: 55vw;
     filter: brightness(80%);
@@ -147,7 +176,7 @@
     position: relative;
     z-index: 2;
     width: 100vw;
-    height: 83vh;
+    height: 41vw;
     margin-top: 0vw;
     margin-left: -50vw;
     background-color: #fb4f00;
@@ -158,25 +187,6 @@
   .content-first{
     margin-top: 2vw;
     margin-left: 0vw;   
-}
-.img-content{
-   
-   margin-top: 2vw;
-   margin-left: -15vw;
-}
-.img-work{
-  position: relative;
-  z-index: 100;
-   transition:  0.5s;
-   float: left;
-   width: 20vw;
-   height: 16vw;
-   cursor: pointer;
-    
-}
-.img-work:hover{
-  transform: scale(0.9);
-  border: solid 5px #fb4f00;
 }
 
 
@@ -191,6 +201,11 @@
     border: none;
     background-color : #fb4f00;
  }
+ @media(max-width: 940px){
+  .content-first h2, .content-first hr{
+    margin-left: -78%;   
+  }
+}
 
  :root{
     --background-dark: #2d3548;
@@ -207,9 +222,9 @@
    position: relative;
      margin-top: 1vw;
      margin-bottom: 25vw;
-    margin-left: -20vw;
+    margin-left: -19.5vw;
     align-items: flex-start;
-    background-color:#FAFAFA;
+    background-color: white;
     display: flex;
     min-height: 100%;
     justify-content: center;
@@ -225,15 +240,19 @@
     width: 100%;
   }
   
-  @media(min-width: 540px){
+  @media(max-width: 960px){
     .card-grid{
-      grid-template-columns: repeat(2, 1fr); 
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: -50%; 
+      width: 100%; 
+       
     }
   }
-  
+ 
   @media(min-width: 960px){
     .card-grid{
       grid-template-columns: repeat(4, 1fr); 
+      
     }
   }
   
@@ -312,7 +331,7 @@
   
   .card__heading{
     color: var(--text-lighter);
-    font-size: 1.9rem;
+    font-size: 1.9vw;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
     line-height: 1.4;
     // word-spacing: 100vw;
@@ -324,8 +343,13 @@
     width: 100vw;
     height: 30vw;
     margin-top: 0vw;
-    margin-left: -50vw
-    
+    margin-left: -50vw  
+}
+@media(max-width: 960px){
+  .content-footer{
+   margin-top: 65vw;
+  
+  }
 }
 .content-footer hr{
     margin-left: 10vw;
@@ -371,6 +395,34 @@
     height: 30vw;
     margin-right: 10vw;
 }
+
+.img-content{
+   
+  margin-top: 2vw;
+  margin-left: -15vw;
+}
+@media(max-width: 960px){
+ .img-content{
+  
+  margin-left: -30vw;
+  margin-right: 10vw;
+ }
+}
+.img-work{
+ position: relative;
+ z-index: 100;
+  transition:  0.5s;
+  float: left;
+  width: 20vw;
+  height: 16vw;
+  cursor: pointer;
+   
+}
+.img-work:hover{
+ transform: scale(0.9);
+ border: solid 5px #fb4f00;
+}
+
 .content-footer-second{
   position: relative;
   background-color: #fafafa;
@@ -380,6 +432,12 @@
   margin-top: 0vw;
  
 }
+@media(max-width: 960px){
+  .content-footer-second{
+   position:absolute;
+   margin-top: 203vw;
+  }
+ }
 .content-footer-second hr{
   margin-left: 10vw;
   margin-bottom:2vw ;
@@ -418,12 +476,12 @@
 .social-icons{
     margin-top: 1vw;
     margin-left: 2vw;
-    font-size: 30px;
+    font-size: 1.8vw;
     
 }
 .fa {
     padding: 10px;
-    font-size: 30px;
+    //font-size: 30px;
     width: 50px;
     text-align: center;
     text-decoration: none;
@@ -477,6 +535,11 @@
     margin-bottom: 10px;
     box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75)
   }
+  @media(max-width: 960px){
+    .about-content img{
+     width: 35vw;
+    }
+   }
   .about-text{
     margin-left: 10vw;
     margin-top:5vh;
@@ -484,6 +547,11 @@
     height: 90vh;
     z-index: -1;
   }
+  @media(max-width: 960px){
+    .about-text {
+     height: 100vw;
+    }
+   }
   .about-text h2{
       font-size: 2vw;
       padding: 1vw;
@@ -495,6 +563,11 @@
       padding-left: 2vw;
       padding-right: 2vw;
   }
+  @media(max-width: 960px){
+    .about-text p{
+     font-size: 1.8vw;
+    }
+   }
   .about-text hr{
     margin-bottom:2vw ;
     width: 5%; 
@@ -669,6 +742,11 @@
   width: 40%;
   filter: brightness(30%);
 }
+@media only screen  and (max-width: 1024px) {
+  .addres, .contact-us img {
+    display: none;
+  }
+}
 .addres{
   font-size: 1.1vw;
   margin-top: 15vw;
@@ -677,6 +755,7 @@
   border: solid 3px #fb4f00;
   color:white;
 }
+
 .addres i{
   color:#fb4f00;
 }
@@ -691,6 +770,11 @@
 	
 	background: #FAFAFA;
 	
+}
+@media only screen  and (max-width: 1024px) {
+  .container-form {
+   width: 80%;
+  }
 }
 .container-form h3{
   text-align: center;
