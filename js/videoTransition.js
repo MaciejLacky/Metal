@@ -1,6 +1,7 @@
 const intro = document.querySelector(".intro");
 const video = intro.querySelector("video");
 const text = intro.querySelector("h1");
+var width = window.outerWidth;
 
 //END SECTION
 const section = document.querySelector("section");
@@ -13,7 +14,7 @@ const textAnim = TweenMax.fromTo(text, 3, { opacity: 0.2 }, { opacity: 1 });
 
 //Scenes
 let scene = new ScrollMagic.Scene({
-  duration: 2000,
+  duration: width,
   triggerElement: intro,
   triggerHook: 0
 })
